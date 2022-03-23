@@ -1,0 +1,19 @@
+[package]
+name = "particle-life"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+macroquad = { version = "0.3", default-features = false }
+rand = "0.8.5"
+rand_distr = "0.4.3"
+phf = { version = "0.10.1", features = ["macros"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# [profile.release]
+# lto = "thin"
